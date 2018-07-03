@@ -1,0 +1,69 @@
+<div class="container" ng-controller="LeaveCreateController as leave" ng-if="main.user.type=='employee'">
+
+	<ol class="breadcrumb" style="background-color: white">
+	  <li class="active"><a href="/" ><span class="glyphicon glyphicon-home" aria-hidden="true" style="padding-right: 4px;"></span>Home</a></li>
+	  <li class="active"><a href="/request">Leaving Request</a></li>
+	</ol>
+	<div class="row"  ng-controller="liveController"  >
+		<h1 class="text-center">Leaving Request</h1>
+		<div class="col-sm-4 col-md-5 col-md-offset-0">
+			
+			
+			<br><br>
+			<div class="alert alert-success alert-dismissible" ng-show="success" >
+		        <a href="#" class="close" data-dismiss="alert" ng-click="closeMsg()" aria-label="close">&times;</a>
+		        {{successMessage}}
+		    </div>
+
+			<form method="post" class="form-signin" ng-submit="leave.leaveSubmit()" ng-click="checkDate(leave.leaveData.date)">
+				<div class="text-center"><b><span class="glyphicon glyphicon-calendar" style="color:black;padding-right: 14px;" aria-hidden="true"></span> Leaving Date </b></div><br>
+				<input type="date" name="date" id="txtDate" class="form-control" ng-model="leave.leaveData.date" min="2018-12-25" ng-change="checkDate(leave.leaveData.date)" ng-controller="liveController"><br>
+				<div class="text-center"><b><span class="glyphicon glyphicon-list-alt" style="color:black;padding-right: 14px;" aria-hidden="true"></span>Leaving Description</b></div><br>
+				<textarea name="description" placeholder="Reason for the Leave" rows="5" class="form-control"  ng-model="leave.leaveData.description"></textarea><br>
+				<div class="text-center"><b><span class="glyphicon glyphicon-map-marker" style="color:black;padding-right: 14px;" aria-hidden="true"></span>Shifting Location</b> </div><br>
+				<input type="text" name="location" placeholder="Country/City" class="form-control"  ng-model="leave.leaveData.location">
+				
+				<br>
+
+				
+				
+				<br><br>
+				<div class="text-center">
+					<button type="submit" class="btn btn-danger" style="padding-right: 160px;padding-left: 160px;"><span class="glyphicon glyphicon-send" style="color:white;padding-right: 14px;" aria-hidden="true"></span> <b>Send Request</b></button>
+				</div>
+			</form>
+			<script type="text/javascript">
+				var today = new Date().toISOString().split('T')[0];
+				document.getElementsByName("date")[0].setAttribute('min', today);
+			</script>
+			
+		</div>
+		<div class="col-sm-2 col-md-1"></div>
+		<div class="col-sm-5 col-md-6" ng-init=restrictedDates()>
+			<br><br><br>
+
+			<div ng-controller="HomeEmployeeController as home" ng-init="totalLeaves()">
+		
+				<span class="label label-success" style="padding-right: 58px; padding-left: 56px; padding-top: 15px; padding-bottom: 15px; font: normal bold 20px Work san, sans-serif;"">Total Leaves &nbsp<span class="badge" style="font-size: 16px; color: white;">{{ total }}</span></span>	
+			
+				<span class="label label-warning" style="padding-right: 25px; padding-left: 25px; padding-top: 15px; padding-bottom: 15px; font: normal bold 20px Work san, sans-serif;"">Remaining Leaves &nbsp<span class="badge" style="font-size: 16px; color: white;">{{ remaining }}</span></span>	
+
+			</div>
+			<br><br>
+
+			<div class="panel panel-warning text-center">
+			  <div class="panel-heading">
+			    <h3 class="panel-title"><span class="glyphicon glyphicon-calendar" style="color:red;padding-right: 8px;" aria-hidden="true"></span><b>Restricted Dates</b></h3>
+			  </div>
+			  <div class="panel-body">
+
+			    <div ng-repeat="dates in rdates">	
+					<p ng-if=" today < dates.date "><span class="glyphicon glyphicon-remove-circle" style="color:red" aria-hidden="true"></span> {{dates.date | date: "fullDate"}}</p>
+				</div>
+
+			  </div>
+			</div>	
+    
+		</div>
+	</div>
+</div> 

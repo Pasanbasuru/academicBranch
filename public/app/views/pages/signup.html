@@ -1,0 +1,88 @@
+<div class="container" ng-controller="UserCreateController as user">
+	<div class="">
+
+		<div class="">
+		
+			<div class="row"> 
+				<div class="col-md-4 col-sm-8 col-offset-0">
+					<h3 class="text-center">Sign Up</h3><br><br>
+				</div>
+			</div>
+			<form method="post" class="form-signin" ng-submit="user.signupUser()" name="signupForm">
+
+				<div class="row">
+					<div class="col-md-4 col-sm-8 col-offset-0">
+						<div class="text-center"><b><span class="glyphicon glyphicon-user" style="color:black;padding-right: 14px;" aria-hidden="true"></span>Name</b></div>
+						<input type="text" name="name" class="form-control" ng-model="user.userData.name" ng-maxlength="10"><br>
+						<div ng-messages="signupForm.name.$error">
+						  <div ng-message="maxlength">100</div>
+						</div>
+					</div>
+				</div>
+				
+				<div ng-controller="signup" class="row">
+					<div class="col-md-4 col-sm-8 col-offset-4">
+					<div class="text-center"><b><span class="glyphicon glyphicon-user" style="color:black;padding-right: 14px;" aria-hidden="true"></span>Username</b></div>
+						<input type="text" name="username" class="form-control" id="user.userData.username"  ng-model="user.userData.username" ng-keyup="checkUsername(user.userData.username)"><br>
+					</div>
+					<div class="col-md-4" ng-class="addClass(unamestatus)" > <br>{{ unamestatus }}</div>
+					
+				</div>
+
+				<div ng-controller="signup" class="row">
+					<div class="col-md-4 col-sm-8 col-offset-4">
+						<div class="text-center"><b><span class="glyphicon glyphicon-eye-open" style="color:black;padding-right: 14px;" aria-hidden="true"></span>Password</b></div>
+						<input type="password" name="password" class="form-control"  ng-model="user.userData.password"><br>
+					</div>
+					
+				</div>
+
+				<div ng-controller="signup" class="row">
+					<div class="col-md-4 col-sm-8 col-offset-4">
+						<div class="text-center"><b><span class="glyphicon glyphicon-pencil" style="color:black;padding-right: 14px;" aria-hidden="true"></span>Employee ID</b></div>
+						<input type="text" name="empID" class="form-control"  ng-model="user.userData.empID"><br>
+					</div>
+					
+				</div>
+
+				<div ng-controller="signup" class="row">
+					<div class="col-md-4 col-sm-8 col-offset-4">
+						<div class="text-center"><b><span class="glyphicon glyphicon-list-alt" style="color:black;padding-right: 14px;" aria-hidden="true"></span>Total Leaves</b></div>
+						<input type="number" name="tleaves" class="form-control"  ng-model="user.userData.tleaves" min="30" max="100"><br>
+					</div>
+					
+				</div>
+
+
+
+
+
+				
+				
+				<br>
+
+				<div class="row" >
+				<div class="col-md-4 col-sm-8 col-offset-4 text-center">
+					<div class="text-center"><b><span class="glyphicon glyphicon-user" style="color:black;padding-right: 14px;" aria-hidden="true"></span>User Type</b></div><br>
+				    <label class="radio-inline">
+				      <input type="radio" name="type" ng-value="'admin'" ng-model="user.userData.type">Admin
+				    </label>
+				    <label class="radio-inline">
+				      <input type="radio" name="type" 
+				     ng-value="'employee'" ng-model="user.userData.type">Employee
+				    </label>
+				 </div>   
+				</div>
+
+				
+				<br><br>
+				<button type="submit" class="btn btn-danger text-center" style="padding-left: 160px; padding-right: 160px;">Sign Up</button>
+
+
+
+				
+
+			</form>
+		</div>
+	</div>
+</div> 

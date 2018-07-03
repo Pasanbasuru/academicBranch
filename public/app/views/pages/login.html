@@ -1,0 +1,24 @@
+<div class="container" ng-controller="MainController as login">
+	<div class="row">
+
+		<div class="col-sm-6 col-md-4 col-md-offset-4">
+
+		<h1 class="text-center animated zoomIn">Login</h1> <br>
+
+			<div class="alert alert-danger alert-dismissible" ng-show="success" >
+                <a href="#" class="close" data-dismiss="alert" ng-click="closeMsg()" aria-label="close">&times;</a>
+                {{successMessage}}
+            </div>
+			<form method="post" class="form-signin" ng-submit="login.doLogin()" name="loginForm">
+				<div class="text-center"><b><span class="glyphicon glyphicon-user" style="color:black;padding-right: 14px;" aria-hidden="true"></span> Username </b></div><br>				
+				<input type="text" name="username" class="form-control"  ng-model="login.loginData.username" required="true" placeholder="Username"><br>
+				<div class="text-center"><b><span class="glyphicon glyphicon-eye-open" style="color:black;padding-right: 14px;" aria-hidden="true"></span> Password </b></div><br>
+				<input type="password" name="password"  class="form-control" ng-model="login.loginData.password" required="true" placeholder="Password">
+
+				<br>
+				<button type="submit" class="btn btn-success" style="padding-right: 160px;padding-left: 160px" ng-disabled="loginForm.$invalid">Login</button>
+
+			</form>
+		</div>
+	</div>
+</div>

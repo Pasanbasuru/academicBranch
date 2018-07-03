@@ -1,0 +1,18 @@
+
+
+
+/* Response */
+.response{
+ padding: 6px;
+ display: block;
+}
+.hide{
+ display: none;
+}
+.exists{
+ color: green;
+}
+
+.not-exists{
+ color: red;
+}
