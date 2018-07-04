@@ -65,7 +65,7 @@ module.exports = function(app, express, io){
 
 
 	api.post('/signup', function(req,res){
-		//console.log(req.body);
+		console.log(req.body);
 		var user = new User({
 			name: req.body.name,
 			username: req.body.username,
@@ -76,9 +76,9 @@ module.exports = function(app, express, io){
 			rleaves: req.body.tleaves
 		});
 
-		console.log(user);
+		//console.log(user);
 
-		var token = createToken(user);
+		//var token = createToken(user);
  
 		//console.log(user);
 		user.save(function(err){
@@ -91,7 +91,7 @@ module.exports = function(app, express, io){
 			res.json({ 
 				success: true,
 				message: 'User has been created!',
-				token: token
+				
 			});
 		});
 	});
@@ -412,7 +412,7 @@ module.exports = function(app, express, io){
 	});
 	api.get('/getRejectedRequests',function(req, res){
 
-		Leave.find({status: "reject"}, function(err,leaves){
+		Leave.find({status: "rejected"}, function(err,leaves){
 				if(err){
 					res.send(err);
 					return;
@@ -424,7 +424,7 @@ module.exports = function(app, express, io){
 	});
 	api.get('/getAcceptedRequests',function(req, res){
 
-		Leave.find({status: "accept"}, function(err,leaves){
+		Leave.find({status: "accepted"}, function(err,leaves){
 				if(err){
 					res.send(err);
 					return;
@@ -449,7 +449,7 @@ module.exports = function(app, express, io){
 	});
 	api.get('/getRejectedRequestsEmployee',function(req, res){
 
-		Leave.find({creator: req.decoded.id, status: "reject"}, function(err,leaves){
+		Leave.find({creator: req.decoded.id, status: "rejected"}, function(err,leaves){
 				if(err){
 					res.send(err);
 					return;
@@ -461,7 +461,7 @@ module.exports = function(app, express, io){
 	});
 	api.get('/getAcceptedRequestsEmployee',function(req, res){
 
-		Leave.find({creator: req.decoded.id, status: "accept"}, function(err,leaves){
+		Leave.find({creator: req.decoded.id, status: "accepted"}, function(err,leaves){
 				if(err){
 					res.send(err);
 					return;
@@ -519,9 +519,140 @@ module.exports = function(app, express, io){
 				res.json(leaves);
 			});
 	});
+
+	api.get('/getAcceptedRequestsUser',function(req, res){
+
+		Leave.find({creator: req.decoded.id, status: "accepted"}, function(err,leaves){
+				if(err){
+					res.send(err);
+					return;
+				}
+				//console.log(leaves.length);
+				res.json(leaves);
+		});
+
+	});
+	api.get('/getRejectedRequestsUser',function(req, res){
+
+		Leave.find({creator: req.decoded.id, status: "rejected"}, function(err,leaves){
+				if(err){
+					res.send(err);
+					return;
+				}
+				//console.log(leaves.length);
+				res.json(leaves);
+		});
+
+	});
+	api.get('/getPendingRequestsUser',function(req, res){
+
+		Leave.find({creator: req.decoded.id, status: "pending"}, function(err,leaves){
+				if(err){
+					res.send(err);
+					return;
+				}
+				//console.log(leaves.length);
+				res.json(leaves);
+		});
+
+	});
+	api.get('/getAcceptedRequestsAdmin',function(req, res){
+
+		Leave.find({ status: "accepted" }, function(err,leaves){
+				if(err){
+					res.send(err);
+					return;
+				}
+				//console.log(leaves.length);
+				res.json(leaves);
+		});
+
+	});
+	api.get('/getRejectedRequestsAdmin',function(req, res){
+
+		Leave.find({ status: "rejected" }, function(err,leaves){
+				if(err){
+					res.send(err);
+					return;
+				}
+				//console.log(leaves.length);
+				res.json(leaves);
+		});
+
+	});
+	api.post('/user_t_leaves',function(req, res){
+		
+		User.findOne({empID: req.body.empID},'tleaves', function(err,leaves){
+				if(err){
+					res.send(err);
+					return;
+				}
+				//console.log(leaves.length);
+				res.json(leaves);
+		});
+
+	});
+	api.post('/user_r_leaves',function(req, res){
+		
+		User.findOne({empID: req.body.empID},'rleaves', function(err,leaves){
+				if(err){
+					res.send(err);
+					return;
+				}
+				//console.log(leaves.length);
+				res.json(leaves);
+		});
+
+	});
+
+	api.post('/reduce_leaves', function(req, res){
+
+		User.findOne({empID: req.body.empID}, function(err, user){
+			if(err){
+				return handleError(err);
+			}
+			
+			console.log(user);
+			user.rleaves = user.rleaves-1;
+
+			user.save(function(err, updateUser){
+				if(err){
+					handleError(err);
+				}
+				res.json({ 
+					success: true,
+					
+				});
+			})
+		});
+	});
 	
 
+	api.get('/check_remain',function(req, res){
 
+		User.findById({_id: req.decoded.id}, function(err,user){
+				if(err){
+					res.send(err);
+					return;
+				}
+
+				res.json(user.rleaves);
+		});
+
+	});
+
+	api.post('/check_r_leaves',function(req, res){
+		
+		User.findOne({empID: req.body.empID},'rleaves', function(err,leaves){
+				if(err){
+					res.send(err);
+					return;
+				}
+				//console.log(leaves.length);
+				res.json(leaves);
+		});
+
+	});
 
 
 
