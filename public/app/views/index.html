@@ -11,12 +11,14 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 	
 
-	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  	
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
-  	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+	
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.22/pdfmake.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 
 	
 
@@ -124,13 +126,13 @@ body {
   <!-- admin functions -->
   <a ng-if="main.user.type=='admin'" href="/" onclick="closeNav()" style="font-size: 26px; color: #30020d;"> <span class="glyphicon glyphicon-home text-center" style="padding-left: 70px; color: blue;" aria-hidden="true"></span>   </a>
   <a ng-if="main.user.type=='admin'" href=""> </a>
-  <a ng-if="main.user.type=='admin'" href="" onclick="closeNav()"  style="font-size: 16px; color: #30020d;"> <span class="glyphicon glyphicon-user " style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Register User  </a>
+  <a ng-if="main.user.type=='admin'" href="/signup" onclick="closeNav()"  style="font-size: 16px; color: #30020d;"> <span class="glyphicon glyphicon-user " style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Register User  </a>
   <a ng-if="main.user.type=='admin'" href=""> </a>
   <a  ng-if="main.user.type=='admin'"  href="/admin" onclick="closeNav()"  style="font-size: 16px; color: #100228;"> <span class="glyphicon glyphicon-hourglass" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Pending Requests  </a>
   <a ng-if="main.user.type=='admin'"  href=""> </a>
-  <a ng-if="main.user.type=='admin'"  href=""  onclick="closeNav()" style="font-size: 16px; color: #0d2044;"> <span class="glyphicon glyphicon-ok" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Accepted Requests </a>
+  <a ng-if="main.user.type=='admin'"  href="/allAccept"  onclick="closeNav()" style="font-size: 16px; color: #0d2044;"> <span class="glyphicon glyphicon-ok" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Accepted Requests </a>
   <a ng-if="main.user.type=='admin'"  href=""> </a>
-  <a ng-if="main.user.type=='admin'"  href="" onclick="closeNav()"  style="font-size: 16px; color: #222f30;"> <span class="glyphicon glyphicon-remove" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Rejected Requests  </a>
+  <a ng-if="main.user.type=='admin'"  href="/allReject" onclick="closeNav()"  style="font-size: 16px; color: #222f30;"> <span class="glyphicon glyphicon-remove" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Rejected Requests  </a>
   <a ng-if="main.user.type=='admin'"  href=""> </a>
   <a  ng-if="main.user.type=='admin'" href="/restrictDate" onclick="closeNav()"  style="font-size: 16px; color: #51391a;"> <span class="glyphicon glyphicon-calendar" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Restrict Dates  </a>
   <a ng-if="main.user.type=='admin'"  href="">  </a>
@@ -144,11 +146,11 @@ body {
   <a ng-if="main.user.type=='employee'" href=""> </a>
   <a ng-if="main.user.type=='employee'" href="" onclick="closeNav()"  style="font-size: 16px; color: #30020d;"> <span class="glyphicon glyphicon-user " style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Account  </a>
   <a ng-if="main.user.type=='employee'" href=""> </a>
-  <a  ng-if="main.user.type=='employee'"  href="" onclick="closeNav()"  style="font-size: 16px; color: #100228;"> <span class="glyphicon glyphicon-hourglass" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Pending Requests  </a>
+  <a  ng-if="main.user.type=='employee'"  href="puser" onclick="closeNav()"  style="font-size: 16px; color: #100228;"> <span class="glyphicon glyphicon-hourglass" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Pending Requests  </a>
   <a ng-if="main.user.type=='employee'"  href=""> </a>
-  <a ng-if="main.user.type=='employee'"  href=""  onclick="closeNav()" style="font-size: 16px; color: #0d2044;"> <span class="glyphicon glyphicon-ok" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Accepted Requests </a>
+  <a ng-if="main.user.type=='employee'"  href="/auser"  onclick="closeNav()" style="font-size: 16px; color: #0d2044;"> <span class="glyphicon glyphicon-ok" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Accepted Requests </a>
   <a ng-if="main.user.type=='employee'"  href=""> </a>
-  <a ng-if="main.user.type=='employee'"  href=""  onclick="closeNav()" style="font-size: 16px; color: #222f30;"> <span class="glyphicon glyphicon-remove" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Rejected Requests  </a>
+  <a ng-if="main.user.type=='employee'"  href="/ruser"  onclick="closeNav()" style="font-size: 16px; color: #222f30;"> <span class="glyphicon glyphicon-remove" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Rejected Requests  </a>
   <a ng-if="main.user.type=='employee'"  href=""> </a>
   <a  ng-if="main.user.type=='employee'" href="/request" onclick="closeNav()"  style="font-size: 16px; color: #51391a;"> <span class="glyphicon glyphicon-calendar" style="padding-right: 4px; color: blue;" aria-hidden="true"></span> Request Leave  </a>
   <a ng-if="main.user.type=='employee'"  href="">  </a>
@@ -157,7 +159,7 @@ body {
 
 
   <!-- end employee functions -->
-  <a href=""> <button type="submit" class="btn btn-danger" ng-click="export()" ><span class="glyphicon glyphicon-save" style="padding-right: 4px;" aria-hidden="true"></span>Download Report</button></a>
+  <a href=""> <button type="submit" class="btn btn-success" ng-click="export()" ><span class="glyphicon glyphicon-save" style="padding-right: 4px;" aria-hidden="true"></span>Download Report</button></a>
  
 
 </div>
