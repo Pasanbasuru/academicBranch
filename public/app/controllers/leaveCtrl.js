@@ -35,6 +35,7 @@ angular.module('leaveCtrl',['leaveService'])
     $scope.rdates = '';
     $scope.tday = new Date();
     $scope.today = $scope.tday.toISOString();
+    $scope.rl = '';
 
     $scope.getTemplate = function(data){
     	
@@ -121,5 +122,12 @@ angular.module('leaveCtrl',['leaveService'])
             }); 
         }
     };
+
+    $scope.checkAvailability = function(){
+        $http.get('/api/check_remain').success(function(data){
+            $scope.rl = data;
+        });
+    };
+
 
 });

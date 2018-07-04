@@ -30,10 +30,49 @@ angular.module('userCtrl',['userService'])
 			})
 	}
 
-	vm.checkUsername = function(){
 
-	}
 })
+
+.controller('RegisterController', function($scope, $http){
+
+    $scope.success = false;
+    $scope.danger = false;
+    $scope.userData = {};
+    $scope.successMessage ='';
+    
+    
+   
+    $scope.register = function(date){
+       
+        $http({
+            method:"POST",
+            url:"/api/signup",
+            data:$scope.userData,
+        }).success(function(data){
+            $scope.signupForm.$setPristine();
+            $scope.successMessage = data.message;
+            console.log($scope.successMessage);
+            $scope.success = false;
+            $scope.danger = false;
+            $scope.userData = {};
+            if(data.message=='User has been created!'){
+                $scope.successMessage = 'Successfully Created A User';
+                $scope.success = true ;
+            }else{
+                $scope.successMessage = "Cannot Create a User !!!";
+                $scope.danger = true;
+            }
+            // console.log($scope.successMessage);
+            // console.log($scope.success);
+        });
+        
+    };
+
+    
+
+
+})
+
 .controller('HistoryController', function($scope, $http){
 
     $scope.success = false;
@@ -61,7 +100,7 @@ angular.module('userCtrl',['userService'])
         }).success(function(data){
            
            $scope.namesData = data;
-            
+            console.log(data);
         });
     };
 
@@ -103,6 +142,8 @@ angular.module('userCtrl',['userService'])
     $scope.rejectedLeaves ='';
     $scope.total = '';
     $scope.remaining = '';
+    $scope.userTotal = '';
+    $scope.userRemain = '';
 
     $scope.pendingData = function(){
         $http.get('/api/getPendingRequestsEmployee').success(function(data){
@@ -127,13 +168,61 @@ angular.module('userCtrl',['userService'])
             $scope.remaining = data.rleaves;
 
         });
+    }; 
+
+    $scope.userTLeaves = function(empID){
+
+        $http({
+            method:"POST",
+            url:"/api/user_t_leaves",
+            data:{'empID':empID}
+        }).success(function(data){
+           
+           $scope.userTotal = data;
+            
+        });
+    };
+    $scope.userRLeaves = function(empID){
+
+        $http({
+            method:"POST",
+            url:"/api/user_r_leaves",
+            data:{'empID':empID}
+        }).success(function(data){
+           
+           $scope.userRemain = data;
+            
+        });
     };
 
-    
-   
+})
+.controller('EmployeeRequestController',function($scope, $http){
+
+	$scope.getTemplate = function(data){
+    	
+        return 'display';
+    };
+
+
+    $scope.pendingData = function(){
+        $http.get('/api/getPendingRequestsUser').success(function(data){
+            $scope.namesData = data;
+        });
+    };
+
+    $scope.acceptedData = function(){
+        $http.get('/api/getAcceptedRequestsUser').success(function(data){
+            $scope.namesData = data;
+        });
+    };
+
+    $scope.rejectedData = function(){
+        $http.get('/api/getRejectedRequestsUser').success(function(data){
+            $scope.namesData = data;
+        });
+    };
 
 })
-
 .controller('signup', function ($scope, $http) {
 	 
 	 // Check username

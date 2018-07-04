@@ -121,12 +121,33 @@ angular.module('adminCtrl',['adminService'])
         }
     };
 })
+.controller('AdminRequestController',function($scope, $http){
+
+    $scope.getTemplate = function(data){
+        
+        return 'display';
+    };
+
+    $scope.acceptedData = function(){
+        $http.get('/api/getAcceptedRequestsAdmin').success(function(data){
+            $scope.namesData = data;
+        });
+    };
+
+    $scope.rejectedData = function(){
+        $http.get('/api/getRejectedRequestsAdmin').success(function(data){
+            $scope.namesData = data;
+        });
+    };
+
+})
 
 .controller('confirmController', function($scope, $http){
 
     $scope.formData = {};
     $scope.addData = {};
     $scope.success = false;
+    $scope.rl = '';
 
     $scope.getTemplate = function(data){
     	
@@ -152,7 +173,35 @@ angular.module('adminCtrl',['adminService'])
                 $scope.successMessage = data.message;
                 $scope.fetchData();
             }); 
+
+
         }
+    };
+
+    $scope.checkRemain = function(empID){
+        $http({
+                method:"POST",
+                url:"/api/check_r_leaves",
+                data:{'empID':empID}
+            }).success(function(data){
+                $scope.rl = data.rleaves;
+            }); 
+
+    };
+
+    $scope.reduce = function(empID){
+       
+            $http({
+                method:"POST",
+                url:"/api/reduce_leaves",
+                data:{'empID':empID}
+            }).success(function(data){
+                $scope.success = true;
+                $scope.fetchData();
+            }); 
+
+            
+        
     };
 
     $scope.reject = function(id){

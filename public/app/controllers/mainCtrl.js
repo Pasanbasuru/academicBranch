@@ -56,9 +56,9 @@ angular.module('mainCtrl', [])
 		 		
 		 		if(data.success){
 		 			if(data.user.type=="admin"){
-			 			$location.path('/admin');	
+			 			$location.path('/');	
 		 			}else if(data.user.type=="employee"){
-		 				$location.path('/request');
+		 				$location.path('/');
 		 			}	
 		 			
 		 		}
