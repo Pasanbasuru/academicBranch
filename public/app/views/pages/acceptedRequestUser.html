@@ -1,7 +1,8 @@
 <div class="row" ng-if="main.user.type=='employee'">
 	<ol class="breadcrumb" style="background-color: white">
 		  <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true" style="padding-right: 4px;"></span>Home</a></li>
-		  <li class="active">Requests</li>
+		  <li >Requests</li>
+		  <li class="active">Accepted Requests</li>
 		</ol>
 	<div class="col-md-3">
 		  
@@ -10,14 +11,11 @@
 
 	<div class="col-md-12" id="exportthis">
 
-		<h1 class="text-center">Leaving History</h1>
+		<h1 class="text-center">Accepted Requests</h1>
 		<br><br>
 		<div class="row">
-		<div ng-controller="liveController as leave" ng-init="fetchData()" >	
-		<div class="alert alert-success alert-dismissible" ng-show="success" >
-            <a href="#" class="close" data-dismiss="alert" ng-click="closeMsg()" aria-label="close">&times;</a>
-            {{successMessage}}
-        </div>
+		<div ng-controller="EmployeeRequestController as emp" ng-init="acceptedData()" >	
+		
 		              
 		  <table class="table table-striped table-hover table-responsive table-condensed">
 		    <thead style=" border-bottom:20px solid white;">
@@ -51,18 +49,7 @@
             </td>
             <td ng-if="data.status!='pending'"></td>
         </script>
-        <script type="text/ng-template" id="edit">
-        	<td><input type="text" ng-model="formData.date" class="form-control" disabled="true" /></td>
-        	<td><input type="text" ng-model="formData.description" class="form-control"/></td>
-            <td><input type="text" ng-model="formData.location" class="form-control"  /></td>
-            
-            
-            <td>
-                <input type="hidden" ng-model="formData.data.id" />
-                <button type="button" class="btn btn-info btn-sm" ng-click="editData()">Save</button>
-                <button type="button" class="btn btn-default btn-sm" ng-click="reset()">Cancel</button>
-            </td>
-        </script> 
+        
         </div>
 		</div>
 	

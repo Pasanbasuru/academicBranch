@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" ng-if="main.user.type=='admin'">
 	<ol class="breadcrumb" style="background-color: white">
 	  <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true" style="padding-right: 4px;"></span>Home</a></li>
 	  <li class="active">Employee History</li>
@@ -31,10 +31,11 @@
 		  <table class="table table-striped table-hover table-responsive table-condensed" ng-if="namesData.length>0">
 		    <thead style=" border-bottom:20px solid white;">
 		      <tr style="color : #151e60; font: normal bold 16px/25px work san , sans-serif;">
+		      	<th>Employee ID</th>
 		        <th>Date</th>
 		        <th>Description</th>
 		        <th>Location</th>
-		        <th>Status</th>
+		       
 		      </tr>
 		      <br>
 		    </thead>
@@ -53,9 +54,11 @@
         </div>
 		
 		<script type="text/ng-template" id="display">
+			<td>{{data.empID}}</td>
             <td>{{data.date | date: "fullDate"}}</td>
             <td>{{data.description}}</td>
             <td>{{data.location}}</td>
+           
             <td ng-if="data.status=='pending'"> <span  class="badge" > {{ data.status }} <span class="glyphicon glyphicon-refresh" style="padding-left: 2px;" aria-hidden="true"></span></span></td>
             <td ng-if="data.status=='rejected'"> <span  class="badge" style="background-color: red;">{{ data.status }}<span class="glyphicon glyphicon-exclamation-sign" style="padding-left: 4px;" aria-hidden="true"></span></span></td>
             <td ng-if="data.status=='accepted'"> <span  class="badge" style="background-color: green;">{{ data.status }}<span class="glyphicon glyphicon-ok" style="padding-left: 2px;" aria-hidden="true"></span></span></td>
@@ -71,5 +74,14 @@
 	<div class="col-md-3">
 		
 
+	</div>
+</div>
+
+<div ng-if="!main.user.type=='admin'">
+	<br><br><br>
+	<div class="jumbotron text-center animated infinite pulse">
+		<h1>Page Not Found</h1> 
+		<br>
+		<h3> <span class="badge" style="font-size: 40px;">404</span> </h3>
 	</div>
 </div>

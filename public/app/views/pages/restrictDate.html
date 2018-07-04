@@ -1,4 +1,4 @@
-<div class="container" ng-controller="restrictDateController as Rdate" ng-init="fetchData()">
+<div class="container" ng-controller="restrictDateController as Rdate" ng-init="fetchData()" ng-if="main.user.type=='admin'">
 	    <ol class="breadcrumb" style="background-color: white">
 		  <li><a href="/"><span class="glyphicon glyphicon-home" aria-hidden="true" style="padding-right: 4px;"></span>Home</a></li>
 		  <li class="active">Restrict Dates</li>
@@ -77,3 +77,12 @@
 		</div>
 	</div>
 </div> 
+
+<div ng-if="!main.user.type=='admin'">
+	<br><br><br>
+	<div class="jumbotron text-center animated infinite pulse">
+		<h1>Page Not Found</h1> 
+		<br>
+		<h3> <span class="badge" style="font-size: 40px;">404</span> </h3>
+	</div>
+</div>

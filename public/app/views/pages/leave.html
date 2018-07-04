@@ -10,16 +10,20 @@
 			
 			
 			<br><br>
-			<div class="alert alert-success alert-dismissible" ng-show="success" >
+			<div class="alert alert-danger alert-dismissible" ng-show="success" >
 		        <a href="#" class="close" data-dismiss="alert" ng-click="closeMsg()" aria-label="close">&times;</a>
 		        {{successMessage}}
 		    </div>
+		    <div class="alert alert-danger alert-dismissible" ng-show="rl==0" >
+		        <a href="#" class="close" data-dismiss="alert" ng-click="closeMsg()" aria-label="close">&times;</a>
+		        Sorry You Cannot Request Leaves. You are run out of Leaves !	
+		    </div>
 
-			<form method="post" class="form-signin" ng-submit="leave.leaveSubmit()" ng-click="checkDate(leave.leaveData.date)">
+			<form method="post" class="form-signin" ng-submit="leave.leaveSubmit()" ng-click="checkDate(leave.leaveData.date)" name="req" ng-init="checkAvailability()">
 				<div class="text-center"><b><span class="glyphicon glyphicon-calendar" style="color:black;padding-right: 14px;" aria-hidden="true"></span> Leaving Date </b></div><br>
-				<input type="date" name="date" id="txtDate" class="form-control" ng-model="leave.leaveData.date" min="2018-12-25" ng-change="checkDate(leave.leaveData.date)" ng-controller="liveController"><br>
+				<input type="date" name="date" required="true" id="txtDate" class="form-control" ng-model="leave.leaveData.date" min="2018-12-25" ng-change="checkDate(leave.leaveData.date)" ng-controller="liveController"><br>
 				<div class="text-center"><b><span class="glyphicon glyphicon-list-alt" style="color:black;padding-right: 14px;" aria-hidden="true"></span>Leaving Description</b></div><br>
-				<textarea name="description" placeholder="Reason for the Leave" rows="5" class="form-control"  ng-model="leave.leaveData.description"></textarea><br>
+				<textarea name="description" placeholder="Reason for the Leave" name="des" rows="5" class="form-control"  ng-model="leave.leaveData.description" required="true"></textarea><br>
 				<div class="text-center"><b><span class="glyphicon glyphicon-map-marker" style="color:black;padding-right: 14px;" aria-hidden="true"></span>Shifting Location</b> </div><br>
 				<input type="text" name="location" placeholder="Country/City" class="form-control"  ng-model="leave.leaveData.location">
 				
@@ -28,8 +32,11 @@
 				
 				
 				<br><br>
-				<div class="text-center">
-					<button type="submit" class="btn btn-danger" style="padding-right: 160px;padding-left: 160px;"><span class="glyphicon glyphicon-send" style="color:white;padding-right: 14px;" aria-hidden="true"></span> <b>Send Request</b></button>
+				<div class="text-center" ng-if="rl > 0">
+					<button type="submit" ng-disabled="success"  class="btn btn-primary" style="padding-right: 160px;padding-left: 160px;"><span class="glyphicon glyphicon-send" ng-mouseover="checkDate(leave.leaveData.date)" style="color:white;padding-right: 14px;" aria-hidden="true" ng-init=""></span> <b>Send Request</b></button>
+				</div>
+				<div class="text-center" ng-if="rl > 0">
+					
 				</div>
 			</form>
 			<script type="text/javascript">
@@ -67,3 +74,13 @@
 		</div>
 	</div>
 </div> 
+
+
+<div ng-if="!main.user.type=='employee'">
+	<br><br><br>
+	<div class="jumbotron text-center animated infinite pulse">
+		<h1>Page Not Found</h1> 
+		<br>
+		<h3> <span class="badge" style="font-size: 40px;">404</span> </h3>
+	</div>
+</div>

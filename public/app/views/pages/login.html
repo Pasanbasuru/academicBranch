@@ -1,4 +1,4 @@
-<div class="container" ng-controller="MainController as login">
+<div class="container" ng-controller="MainController as login" ng-if="!main.loggedIn">
 	<div class="row">
 
 		<div class="col-sm-6 col-md-4 col-md-offset-4">
@@ -21,4 +21,9 @@
 			</form>
 		</div>
 	</div>
+</div>
+
+<div ng-if="main.loggedIn">
+	<br><br><br><br><br>
+	<a href="/" class="jumbotron text-center"> You have logged in already !</a>
 </div>
