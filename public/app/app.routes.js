@@ -4,6 +4,10 @@ angular.module('appRoutes', ['ngRoute'])
 
 	$routeProvider
 
+		.when('/',{
+			templateUrl: 'app/views/pages/home.html'
+		})
+
 		.when('/homeold', {
  
 			templateUrl: 'app/views/pages/home.html',
@@ -33,6 +37,21 @@ angular.module('appRoutes', ['ngRoute'])
 		.when('/restrictDate',{
 			templateUrl: 'app/views/pages/restrictDate.html'
 		})
+		.when('/auser',{
+			templateUrl: 'app/views/pages/acceptedRequestUser.html'
+		})
+		.when('/ruser',{
+			templateUrl: 'app/views/pages/rejectedRequestUser.html'
+		})
+		.when('/puser',{
+			templateUrl: 'app/views/pages/pendingRequestUser.html'
+		})
+		.when('/allAccept',{
+			templateUrl: 'app/views/pages/acceptedRequestAll.html'
+		})
+		.when('/allReject',{
+			templateUrl: 'app/views/pages/rejectedRequestAll.html'
+		})
 		.when('/request',{
 			templateUrl: 'app/views/pages/leave.html',
 			controller: 'liveController'
@@ -59,9 +78,7 @@ angular.module('appRoutes', ['ngRoute'])
 				}
 			}
 		})
-		.when('/',{
-			templateUrl: 'app/views/pages/home.html'
-		})
+		
 		.when('/history',{
 			templateUrl: 'app/views/pages/employeeHistory.html'
 		})
@@ -69,7 +86,7 @@ angular.module('appRoutes', ['ngRoute'])
 			templateUrl: 'app/views/pages/error.html'
 		})
 		.otherwise({
-	        redirectTo: '/login'
+	        redirectTo: '/error'
 	      });
 
 		
