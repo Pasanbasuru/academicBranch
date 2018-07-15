@@ -82,6 +82,9 @@ angular.module('appRoutes', ['ngRoute'])
 		.when('/history',{
 			templateUrl: 'app/views/pages/employeeHistory.html'
 		})
+		.when('/sb',{
+			templateUrl: 'app/views/pages/seabird.html'
+		})
 		.when('/error',{
 			templateUrl: 'app/views/pages/error.html'
 		})
