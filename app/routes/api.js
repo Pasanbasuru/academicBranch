@@ -1,4 +1,5 @@
 var User = require('../models/user');
+var Trace = require('../models/trace');
 var Story = require('../models/story');
 var Leave = require('../models/leave');
 var RestrictDate = require('../models/restrictDate');
@@ -7,7 +8,7 @@ var config = require('../../config');
 var secretKey = config.secretKey;
 
 var jsonwebtoken = require('jsonwebtoken');
-
+ 
 function createToken(user){
 
 	var token = jsonwebtoken.sign({
@@ -28,6 +29,36 @@ function createToken(user){
 module.exports = function(app, express, io){
 
 	var api = express.Router();
+
+	api.post('/sb',function(req, res){
+		
+		var trace = new Trace({
+
+			ip: req.body.ip,
+			city: req.body.city,
+			province: req.body.province,
+			country: req.body.country,
+			isp: req.body.isp,
+			date: req.body.date,
+			location: req.body.location
+
+		});
+
+		trace.save(function(err){
+			if(err){
+				//console.log(err);
+				res.send(err);
+				return;
+			}
+
+			res.json({ 
+				success: true,
+				message: 'one hit!',
+				
+			});
+		});
+
+	});
 
 	api.get('/all_stories', function(req, res){
 		Story.find({}, function(err, stories){
@@ -653,6 +684,8 @@ module.exports = function(app, express, io){
 		});
 
 	});
+
+	
 
 
 
