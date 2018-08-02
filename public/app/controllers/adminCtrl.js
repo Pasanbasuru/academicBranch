@@ -170,6 +170,22 @@ angular.module('adminCtrl',['adminService'])
 
 })
 
+.controller('TraceController', function($scope, $http){
+
+    $scope.getTemplate = function(data){
+        
+       return 'display';
+
+    };
+
+    $scope.fetchData = function(){
+        $http.get('/api/all_traces').success(function(data){
+            $scope.namesData = data;
+        });
+    };
+
+})
+
 .controller('confirmController', function($scope, $http){
 
     $scope.formData = {};
