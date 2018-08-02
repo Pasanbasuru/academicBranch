@@ -207,6 +207,9 @@
 			<td>{{data.isp}}</td>
             <td>{{data.date | date: "fullDate"}}</td>
             <td>{{data.date | date: "shortTime"}}</td>
+            <td>
+                <button type="button" class="btn btn-danger btn-sm" ng-click="deleteData(data._id)">Delete</button>
+            </td>
             
         </script>
         
