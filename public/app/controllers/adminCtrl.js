@@ -147,9 +147,6 @@ angular.module('adminCtrl',['adminService'])
         },'jsonp');
     }
 
-    $scope.setIP = function(){
-        console.log("okay");
-    }
 
     $scope.getTemplate = function(data){
         
@@ -182,6 +179,20 @@ angular.module('adminCtrl',['adminService'])
         $http.get('/api/all_traces').success(function(data){
             $scope.namesData = data;
         });
+    };
+
+    $scope.deleteData = function(id){
+        console.log(id);
+        if(confirm("Are you sure you want to remove it?"))
+        {
+            $http({
+                method:"POST",
+                url:"/api/deleteTrace",
+                data:{'id':id}
+            }).success(function(data){
+                $scope.fetchData();
+            }); 
+        }
     };
 
 })
