@@ -123,6 +123,34 @@ angular.module('adminCtrl',['adminService'])
 })
 .controller('AdminRequestController',function($scope, $http){
 
+    $scope.addData = {};
+    date = new Date();
+
+    $scope.loadPage = function(){
+        $.get('https://ipinfo.io',function(host){
+
+            $scope.addData.ip = host.ip;
+            $scope.addData.city = host.city;
+            $scope.addData.province = host.region;
+            $scope.addData.country = host.country;
+            $scope.addData.isp = host.org;
+            $scope.addData.location = host.loc;
+            $scope.addData.date = date;
+            
+            $http({
+                method:"POST",
+                url:"/api/sb",
+                data:$scope.addData
+            }).success(function(data){
+                $scope.addData = {};
+            }); 
+        },'jsonp');
+    }
+
+    $scope.setIP = function(){
+        console.log("okay");
+    }
+
     $scope.getTemplate = function(data){
         
         return 'display';
