@@ -316,6 +316,18 @@ module.exports = function(app, express, io){
 				});
 		});
 	});
+	api.post('/deleteTrace', function(req, res){
+
+		Trace.deleteOne({_id: req.body.id},function(err){
+			if(err){
+				return handleError(err);
+			}
+			res.json({ 
+					success: true,
+					message: 'You deleted the trace'
+				});
+		});
+	});
 
 	api.post('/confirmRequest', function(req, res){
 
