@@ -539,6 +539,16 @@ module.exports = function(app, express, io){
 				res.json(leaves);
 			});
 	});
+
+	api.get('/all_traces', function(req, res){
+		Trace.find({}, function(err,traces){
+				if(err){
+					res.send(err);
+					return;
+				}
+				res.json(traces);
+			});
+	});
 	api.post('/emp_leaves', function(req, res){
 
 		Leave.find({empID: req.body.empID}, function(err,leaves){
