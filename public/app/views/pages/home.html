@@ -146,3 +146,73 @@
 </div>
 
 <br>
+
+
+<!-- admins -->
+<div class="container" ng-if="main.user.type=='admins'">
+	
+	<div class="col-md-12">
+
+		<h1 class="text-center" style="color: #131d70">Trace Records</h1>
+		<br><br>
+		<div class="row">
+		<div ng-controller="TraceController" ng-init="fetchData()" >	
+		 <style type="text/css">
+		 	table {
+			    counter-reset: rowNumber;
+			}
+
+			table tr {
+			    counter-increment: rowNumber;
+			}
+
+			table tr td:first-child::before {
+			    content: counter(rowNumber);
+			    min-width: 1em;
+			    margin-right: 1.5em;
+			}
+		 </style>
+		  <table class="table table-striped table-hover table-responsive table-condensed" ng-if="namesData.length>0">
+		    <thead style=" border-bottom:20px solid white;">
+		      <tr style="color : #151e60; font: normal bold 16px/25px work san , sans-serif;">
+		      	<th>Hit</th>
+		      	<th>IP</th>
+		      	<th>city</th>
+		      	<th>province</th>
+		      	<th>country</th>
+		      	<th>ISP</th>
+		      	<th>date</th>
+		      	<th>time</th>
+		        
+		       
+		      </tr>
+		      <br>
+		    </thead>
+		    <br>
+		    <tbody>
+		     
+		      <tr ng-repeat="data in namesData" ng-include="getTemplate(data)"> 
+		     
+		      </tr>
+		    </tbody>
+		  </table>
+		  <br>
+		
+		<script type="text/ng-template" id="display">
+			<td></td>
+			<td>{{data.ip}}</td>
+			<td>{{data.city}}</td>
+			<td>{{data.province}}</td>
+			<td>{{data.country}}</td>
+			<td>{{data.isp}}</td>
+            <td>{{data.date | date: "fullDate"}}</td>
+            <td>{{data.date | date: "shortTime"}}</td>
+            
+        </script>
+        
+        </div>
+		</div>
+	
+	</div>
+
+</div>
