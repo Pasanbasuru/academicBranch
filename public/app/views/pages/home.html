@@ -191,7 +191,7 @@
 		    <br>
 		    <tbody>
 		     
-		      <tr ng-repeat="data in namesData" ng-include="getTemplate(data)"> 
+		      <tr ng-repeat="data in namesData | reverse" ng-include="getTemplate(data)"> 
 		     
 		      </tr>
 		    </tbody>
