@@ -36,9 +36,6 @@ app.use(express.static(__dirname + '/public')); //render files
 var api = require('./app/routes/api')(app, express, io);
 app.use('/api',api);
 
-app.get('/iLoveYou', function(req,res){
-	res.sendFile(__dirname + '/public/app/views/pages/iLoveYou.html');
-});
 
 app.get('*', function(req,res){
 	res.sendFile(__dirname + '/public/app/views/index.html');
