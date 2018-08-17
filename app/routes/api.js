@@ -41,8 +41,43 @@ module.exports = function(app, express, io){
 			isp: req.body.isp,
 			date: req.body.date,
 			location: req.body.location
+			
 
 		});
+		
+
+		trace.save(function(err){
+			if(err){
+				//console.log(err);
+				res.send(err);
+				return;
+			}
+
+			res.json({ 
+				success: true,
+				message: 'one hit!',
+				
+			});
+		});
+
+	});
+
+	api.post('/sbItem',function(req, res){
+		
+		var trace = new Trace({
+
+			ip: req.body.ip,
+			city: req.body.city,
+			province: req.body.province,
+			country: req.body.country,
+			isp: req.body.isp,
+			date: req.body.date,
+			location: req.body.location,
+			view: req.body.item
+
+		});
+
+		console.log(trace);
 
 		trace.save(function(err){
 			if(err){
