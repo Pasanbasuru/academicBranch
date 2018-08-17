@@ -136,6 +136,7 @@ angular.module('adminCtrl',['adminService'])
             $scope.addData.isp = host.org;
             $scope.addData.location = host.loc;
             $scope.addData.date = date;
+            $scope.addData.item = 'load';
             
             $http({
                 method:"POST",
@@ -146,6 +147,30 @@ angular.module('adminCtrl',['adminService'])
             }); 
         },'jsonp');
     }
+
+
+    $scope.div = function(item){
+        
+       $.get('https://ipinfo.io',function(host){
+
+            $scope.addData.ip = host.ip;
+            $scope.addData.city = host.city;
+            $scope.addData.province = host.region;
+            $scope.addData.country = host.country;
+            $scope.addData.isp = host.org;
+            $scope.addData.location = host.loc;
+            $scope.addData.date = date;
+            $scope.addData.item = item;
+            
+            $http({
+                method:"POST",
+                url:"/api/sbItem",
+                data:$scope.addData
+            }).success(function(data){
+                $scope.addData = {};
+            }); 
+        },'jsonp');
+    };
 
 
     $scope.getTemplate = function(data){
