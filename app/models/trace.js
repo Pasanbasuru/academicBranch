@@ -10,7 +10,8 @@ var TraceSchema = new Schema({
 	date: Date,
 	isp: String,
 	province: String,
-	location: String
+	location: String,
+	view:  { type: String, default: 'load' }
 
 });
 
