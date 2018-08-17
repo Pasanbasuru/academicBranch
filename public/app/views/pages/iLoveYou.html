@@ -4,7 +4,40 @@
 <div ng-controller="AdminRequestController">
 
 	
-	
+	<div class="row">
+
+		<div class="col-md-7 col-md-offset-2">
+			<div class="clock" style="margin-left:7em;"></div>
+			<div class="message"></div>
+
+			<script type="text/javascript">
+				var clock;
+				
+				$(document).ready(function() {
+					var clock;
+
+					clock = $('.clock').FlipClock({
+				        clockFace: 'DailyCounter',
+				        autoStart: false,
+				        callbacks: {
+				        	stop: function() {
+				        		$('.message').html('The clock has stopped!')
+				        	}
+				        }
+				    });
+					
+					var date1 = new Date();
+					var date2 = new Date("09/14/2018");
+					var timeDiff = Math.abs(date2.getTime() - date1.getTime());	 
+				
+				    clock.setTime(timeDiff/1000);
+				    clock.setCountdown(true);
+				    clock.start();
+
+				});
+			</script>
+		</div>				
+	</div>
 
 	
 	<!-- song 17 -->
