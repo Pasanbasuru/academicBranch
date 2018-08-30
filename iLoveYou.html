@@ -1,0 +1,1351 @@
+
+
+
+<div ng-controller="AdminRequestController">
+
+	
+	<div class="row">
+
+		<div class="col-md-7 col-md-offset-2">
+			<div class="clock" style="margin-left:7em;"></div>
+			<div class="message"></div>
+
+			<script type="text/javascript">
+				var clock;
+				
+				$(document).ready(function() {
+					var clock;
+
+					clock = $('.clock').FlipClock({
+				        clockFace: 'DailyCounter',
+				        autoStart: false,
+				        callbacks: {
+				        	stop: function() {
+				        		$('.message').html('The clock has stopped!')
+				        	}
+				        }
+				    });
+					
+					var date1 = new Date();
+					var date2 = new Date("09/14/2018");
+					var timeDiff = Math.abs(date2.getTime() - date1.getTime());	 
+				
+				    clock.setTime(timeDiff/1000);
+				    clock.setCountdown(true);
+				    clock.start();
+
+				});
+			</script>
+		</div>				
+	</div>
+
+	<!-- song 30 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-success">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#30</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				සිනා පොඳක් වී<br>
+				ඔබගෙ දෑසේ <br>
+				නිදන්ව ඉන්නට<br>
+				පෙරුම් පෙරූ මට<br>
+				කඳුළැල්ලක් දී<br>
+				ඔබගෙ දෑසින්<br>
+				ගිලිහී යන්නට<br>
+				උරුම කළේ ඇයි.....<br><br>
+
+				සෙවණැල්ලක් සේ<br>
+				ඔබ දිවි ගමනේ<br>
+				අත්වැල වන්නට <br>
+				පැතුම් පැතූ මා<br>
+				මිරිඟුව දක්වා<br>
+				නෙතු යුග රවටා<br>
+				වල් මත් කරදා<br>
+				සැඟව ගියේ ඇයි....<br><br>
+
+				මල් කැකුළක් සේ<br>
+				ඔබ හද උයනේ<br>
+				විකසිත වන්නට <br>
+				සැරසී උන් මා<br>
+				සිත ගිනි අවුලා<br>
+				පියවර හවුරා<br>
+				අසරණ කරදා<br>
+				ඉවත ගියේ ඇයි.....﻿<br><br>
+
+				<div  ng-click="div(30)">
+					<audio controls>
+				 		 <source src="app/views/audios/sina_podak.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+
+	<!-- song 29 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-warning">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#29</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				කඳුළ නිවන්නම් නෙත නොතෙමනවානම්<br>
+				තනියට ඉන්නම් තනි නොකරනවානම්<br>
+				මතකයෙ ඉන්නම් අමතක නොමවේනම්<br>
+				සෙනෙහෙ පුදන්නම් හිත නොරිදනවානම්...<br><br>
+
+				මල් පූදින්නේ දෑගිලි අතරේ<br>
+				තැලී පෙලී මියැදෙන්න නොවේ..<br>
+				සෙනෙහෙ පුදන්නේ සෙනෙහෙ ලබන්නයි <br>
+				හිතරිදවා හඬවන්න නොවේ...<br><br>
+
+				සඳ පායන්නේ හිරු නැති ලෝකේ<br>
+				ඝණදුර දුරු කරවා ලන්නයි<br>
+				සෙනෙහෙ පුදන්නේ අඳුරේ තනිවෙන<br>
+				හිතකට එළියක් ලැබ දෙන්නයි<br><br>
+
+				<div  ng-click="div(29)">
+					<audio controls>
+				 		 <source src="app/views/audios/kandula_niwannam.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+
+	<!-- song 28 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#28</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				මගේ දින පොතේ හි අද රෑ ලියන්නේ<br>
+				අප පෙම් කතාවේ අවසානයි<br>
+				ඔබ නේන දා හෙට මා මනමාලියයි<br><br>
+
+				කවදාක හෝ එක්තැන් වෙලා<br>
+				සුව හා සුසුම් සමසේ දරා <br>
+				ඇත වැල් බැදන් යමු ජීවිතේ<br>
+				ඒ කී වදන් බෝල් හීනෙකි<br><br>
+
+				පාසල් සමේ අපි දෙන්නගේ<br>
+				නම් කුරුටු ගෑ කඩදාසි ඒ <br>
+				ගිනි අවුළුවා නටබුන් පෙමින්<br>
+				අපි වෙන්වෙමු ෛදවේ ලෙසින්<br><br>
+
+				<div  ng-click="div(28)">
+					<audio controls>
+				 		 <source src="app/views/audios/mage_dinapothe.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+
+	<!-- song 27 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-danger">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#27</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				ගතින් ඉන්නට නැතත් ලං වී<br>
+				සිතින් යන්නට එපා වෙන් වී<br>
+				ඔබෙන් තොර වූ ලෝකයක්<br>
+				සිතා ගන්නට බෑ...<br><br>
+
+				ඔබේ දෙනෙතින් ලොව දකින්නෙමි<br>
+				ඔබේ වදනින් ලොව අසන්නෙමි<br>
+				නවාතැන .. ජීවන මගේ..<br>
+				ඔබේ සෙවනැල්ලයි...<br><br>
+
+				ඔබේ ඇසුරෙන් යළි උපන්නෙමි<br>
+				ඔබේ දැකුමෙන් දිවි ගෙවන්නෙමි <br>
+				සදාතන.. ජීවය හදේ..<br>
+				ඔබේ හසරැල්ලයි...<br><br>
+
+				<div  ng-click="div(27)">
+					<audio controls>
+				 		 <source src="app/views/audios/gathin_innata.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- song 26 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#26</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				රන් කෙන්දෙන් බැඳ <br>
+				අතැඟිලි එක්කල ආදරයයි..<br>
+				පෙම් රැහැනින් බැඳ <br>
+				සිතුම් වසඟ කල ආදරයයි..<br><br>
+
+				කිරිලියසේ දුර පියා සලාලා <br>
+				අත්තටු රිඳුනා පමණයි..<br>
+				දෑල විදාහල දෑත මගේ <br>
+				ඔබටත් ඔහුටත් උරුමයි..<br>
+				හිරු සඳු එකවර දෙපස නැගේ.. <br>
+				කළුවර ඇයි විජිතයම මගේ..<br><br>
+
+				කනාටු සුළඟේ දුහුල් මලකි අද<br>
+				වල්මත් වී පාවෙන්නේ..<br>
+				ඔබගෙන් දෝ - ඔහුගෙන් දෝ<br>
+				මා හෙට දින සමුගන්නේ...<br><br>
+
+				<div  ng-click="div(26)">
+					<audio controls>
+				 		 <source src="app/views/audios/ran_kenden.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- song 25 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#25</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				කුරුටු ගෑ ගී‍ පොතේ කුරුටු ගී කෑ ගසා <br>
+				ගිලන් හද පාරවා ගෙනේ වද වේදනා...<br>
+				කුරුටු ගෑ ගී පොතේ...<br><br>
+
+				ඔබෙන් පෙරදා උගෙන කවිකම් ලියූ කවි ගීතිකා...<br>
+				ඔබේ නාමෙන් හැඩූ කදුලින් ගයමි මම කිවිදුනේ...<br><br>
+
+				මියුරු කවිවැල් කුරිරු ස්ව‍රයෙන් ඇසේ රෑ යාමයේ<br>
+				නොලැබ කිවිදුන් කුමට කවිකම් කිවිද මට කවිලොවේ...<br><br>
+
+				<div  ng-click="div(25)">
+					<audio controls>
+				 		 <source src="app/views/audios/kurutu_ga.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- song 24 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-success">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#23</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				ඇරඹුමම කඳුලක් වෙලා<br>
+				මා බලා ඉද්දී ඒ දිහා<br>
+				ආ දුරත් දුර වැඩි නිසා<br>
+				අවසානයට පෙර ඈ ගියා...<br><br>
+
+				දුක්බරම කවියක් ලියා<br>
+				එහි පද පෙලක් අඩුවෙන් තියා...<br>
+				අරුත පසිදින්නට කියා<br>
+				අවසානයට පෙර ඈගියා...<br><br>
+
+				ශෝකාන්තය එන තුරා <br>
+				එහි ‍රැදෙන්නට සිත් ඇති නියා...<br>
+				අනන්තය ලඟ මා දමා <br>
+				අවසානයට පෙර ඈ ගියා...<br><br>
+
+				<div  ng-click="div(24)">
+					<audio controls>
+				 		 <source src="app/views/audios/arabumama.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- song 23 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-warning">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#23</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				හිනා වෙන්න බැරි තරමට<br>
+				හඩා ගන්න බැරි තරමට<br>
+				නුබේ නමින් මගේ හිතේ<br>
+				තැනූ මාලිගා තැනූ මාලිගා<br>
+				කතා කියන තරු දෑසට<br>
+				ලියා දෙන්න මදි අහසම<br>
+				කතා කියන තරු දෑසට<br>
+				ලියා දෙන්න මදි අහසම<br>
+				නුබේ නමින් මගේ හිතේ මැවෙනා ගීතිකා<br><br>
+				මැවෙනා ගීතිකා<br>
+
+				දෙතොල නම් ගොලුයි<br>
+				මුව කමල මල් සමයි<br>
+				හිතට නෙතට සුවද ගෙන තියා<br>
+				නුබ රහසින් ඇවිත් මගේ ලොවම හීනයක් කලා<br><br>
+
+				අහස නම් දුරයි<br>
+				සද නේන බව සැබැයි සදට රැයට තරු වලට හඩා<br>
+				නුබ නොකියා ගිහින් මගේ පාලු ලොවම බොද කලා<br><br>
+
+
+				<div  ng-click="div(23)">
+					<audio controls>
+				 		 <source src="app/views/audios/hinawenna_bari.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>	
+
+
+
+	<!-- song 22 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#22</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				දෙනෝදහක් ගැවසෙන සරසවියේ<br>
+				පාළුව තනිකම දැණෙනවනම්<br>
+				කුටියේ කවුළුව විවර කරනු මැන<br>
+				සුළඟක් වී ඔබ වෙත එන්නම්<br><br>
+
+				ඔබ සරසවියක මා පොඩි ගෙපැලක<br>
+				එක්වන්නට අද වරම් නැතේ <br>
+				එකම පන්තියේ එක ළඟ ඉඳගෙන<br>
+				පාසල් ගිය හැටි සිතට නැගේ<br><br>
+
+
+				ඔබ හා අත්වැල් බැඳ ඇවිදින්නට<br>
+				පෙරුම් පිරූ පාසැල් සමයේ <br>
+				සිල්ප සතර රැඳුණේ නැහැ මා සිත<br>
+				ඒ හින්දයි අපි දුරස් වුණේ<br><br>
+
+
+				<div  ng-click="div(22)">
+					<audio controls>
+				 		 <source src="app/views/audios/denodahak.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+	
+	<!-- song 21 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-danger">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#21</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				මේ නගරය මා ඔබ මුණ ගැසුණු නගරයයි<br>
+				මේ නගරය මා ඔබ වෙන් කෙරුණු නගරයයි <br><br>
+
+				ගං ඉවුරේ දිය රැළ පෙරසේම බිඳෙනවා<br>
+				නුග ගස් පෙළ අප නැතුවත් තව දළු ලනවා<br>
+				සරසවි බිම කඳු රැල්ලෙන් එතෙර පෙනෙනවා<br>
+				ඔබත් එක්ක ආයෙත් එහි යන්න හිතෙනවා<br><br>
+
+				
+				ඔබ අත ගෙන ගිය වීදියෙ ඈ හා යනවා<br>
+				සිඟිති පුතා අතැඟිල්ලක එල්ලී එනවා<br>
+				ඒ කාලේ පැතූ පැතුම් යළි සිහිවෙනවා<br>
+				ජිවිතයම හීනයකැයි කියා හිතෙනවා<br><br>
+
+				<div  ng-click="div(21)">
+					<audio controls>
+				 		 <source src="app/views/audios/me_nagaraya.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- song 20 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#20</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				අසුරු සැණින් එක මොහොතකදී<br>
+				කාලය නැවතී යලි ඇරඹී<br>
+				විශ්වය අලුතින් බිහි වේවා<br>
+				ඔබේම වී මා මගේම වී ඔබ<br>
+				අපේම වී අප ඉපදේවා<br><br>
+
+				යෙහෙළියන්ගෙ ඉඟි දිනක සැබෑ වී<br>
+				ඔබේම කුල ගෙයි පතිනිය වන්නට <br>
+				මතු යම් දවසක හැකි වේවා<br>
+				ඔබේම වී මා මගේම වී ඔබ<br>
+				අපේම වී අප ඉපදේවා<br><br>
+
+				සෙනෙහෙ විමානේ කිරුළ දරන දා<br>
+				සිඟිති තොලක කිරි හිනා දකින්නට <br>
+				එක සෙවණකදී හමුවේවා<br>
+				ඔබේම වී මා මගේම වී ඔබ<br>
+				අපේම වී අප ඉපදේවා<br><br>
+
+				<div  ng-click="div(20)">
+					<audio controls>
+				 		 <source src="app/views/audios/asuru_sanin.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- song 19 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#19</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				හිරු මැකී යයි නීල අහසේ සේද මීදුම් මායිමේ<br>
+				නිමාවී යයි මේ වසන්තේ යලිත් නොම එයි කිසි දිනේ<br>
+				ගිණි කඳු පුපුරා ලෝදිය ගලනා තරම්<br>
+				රිදුම් දෙයි ආදරේ<br><br>
+
+				නෙතු සලා හමුවෙලා සුසුමකින් වෙන් වුනා<br>
+				නෙතු සලා හමුවෙලා සුසුමකින් වෙන් වුනා<br>
+
+				තුෂර පින්නේ පැතුම් ඕවිල්ලේ<br>
+				ඔබේ සෙනෙහේ ඔහු හදේ රැදුනේ<br>
+				එදා මතකය සිතේ අහුරා.. <br>
+				කාටවත් නොපෙනී අඳුරේ<br>
+				ඉකිබිඳිමි රහසේ<br><br>
+
+				නෙතු සලා හමුවෙලා සුසුම කින් වෙන් වුනා<br>
+				නෙතු සලා හමුවෙලා සුසුම කින් වෙන් වුනා<br><br>
+
+				සිනහ කඳුලේ දෙනෙත් දොවමින්<br>
+				දුටුව සිහිනේ නෙත් වැසුනු අඳුරේ<br>
+				ඈත මීදුම් අතර සඟවා<br> 
+				යන්න ප්‍රිය ලඳුනේ<br>
+				හද සුසුම් පවනේ<br><br>
+
+				රැගෙන මා සුභ පැතුම් හද තුටින් යනු මැනේ <br>
+				රැගෙන මා සුභ පැතුම් හද තුටින් යනු මැනේ <br><br>
+
+				<div  ng-click="div(19)">
+					<audio controls>
+				 		 <source src="app/views/audios/hiru_maki_yai.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+
+	<!-- song 18 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-success">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#18</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				ආදරේ සිතුම් දිලුනා මතකයි <br>
+				පැහැසරින් නුඹේ හද දැවුණා<br>
+				ගීයකින් කෙසේ මා සිතුම් කියම්දෝ ළඳේ<br>
+				බොඳ වෙනා සිහිනයක දැවටෙනා<br>
+				පවස මගේ ඔබ නිසා නොනිමේ ළඳුනේ<br>
+				ආදර වදන් කියූ<br> 
+				කාලේ යළි එන්නේ නෑ <br>
+				ආදරේ සුවඳ දැන් <br>
+				මගේ හදින් යන්නෙ නෑ<br>
+				මගේ හදින් යන්නේ නෑ<br><br>
+
+				මා සිතින් දැල්වූ හැම පහන්සිල ඔබමයි<br>
+				දැවී දැවී එළිය දෙන් ජීවිතේ<br>
+				ගීයකින් කෙසේ මා සිතුම් කියම්දෝ ළඳේ<br>
+				බොඳ වෙනා සිහිනයක දැවටෙනා<br>
+				පවස මගේ ඔබ නිසා නොනිමේ ළඳුනේ<br>
+				ආදර වදන් කියූ <br>
+				කාලේ යළි එන්නේ නෑ <br>
+				ආදරේ සුවඳ දැන් <br>
+				මගේ හදින් යන්නෙ නෑ<br>
+				මගේ හදින් යන්නේ නෑ<br><br>
+
+				පවස මගේ ඔබ නිසා නොනිමේ ළඳුනේ<br>
+				ආදර වදන් කියූ <br>
+				කාලේ යළි එන්නේ නෑ <br>
+				ආදරේ සුවඳ දැන් <br>
+				මගේ හදින් යන්නෙ නෑ<br>
+				මගේ හදින් යන්නේ නෑ<br><br>
+				
+				<div  ng-click="div(18)">
+					
+					<audio controls>
+				 		 <source src="app/views/audios/adare_sithum.mp3" type="audio/mpeg" >
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+	
+	<!-- song 17 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-warning">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#17</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				සැබෑ නොවෙනා හීන හරි මිහිරියි <br>
+				ක්ෂිතිජයක් සේ රවටලා සිත<br>
+				සිතින් විතරන් එක්වෙලා<br>
+				අතීතය දෝතට අරන් අපි<br>
+				අහස් ගඟටම විසි කළා<br>
+				සැබෑ නොවෙනා හීන හරි මිහිරියි<br><br>
+
+				එදා අප පියමං කරපු මග<br>
+				වියෝවක ගී ඉතිරි වී ඇත<br>
+				එපා සුළඟේ අරන් යන්නට<br>
+				ඔහේ තිබුණාදෙන්<br>
+				සැබෑ නොවෙනා හීන හරි මිහිරියි<br><br>
+
+				පහන නිවුනා පහන් පැල මත<br>
+				ඒ සුවඳ තාමත් රැඳී ඇත<br>
+				එපා සුළඟේ අරන් යන්නට<br>
+				ඔහේ තිබුණාදෙන්<br>
+				සැබෑ නොවෙනා හීන හරි මිහිරියි<br><br>
+	
+				<div  ng-click="div(17)">
+					<audio controls>
+				 		 <source src="app/views/audios/saba_nowena.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+
+	<!-- song 16 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#16</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				මේ තරම්... <br>
+				රිදවුම් ඔබෙන් හමු වෙලා මොහොතකින්...<br>
+				මේ රිදුම් ඔබ හින්ද දැන්. වේදනා උහුලමින්...<br>
+
+				නෑසිලා ඔබෙ පෙම් වදන. හිත මගෙ හඩනවා...<br><br>
+
+				ආදරේ වේදනා...<br>
+				මගේ හිත පුරවලා...<br>
+				සදා කල් හඩවලා...<br>
+				කොහෙදෝ ගියේ...<br>
+				ඔයාටම හිමි වෙලා.<br>
+				මම ඔයගෙම වෙලා.<br>
+				බලා ඉන්නෙ සදා...<br>
+				ඔයා වෙනුවෙන් තමා...<br><br>
+
+				සුලගක් වගේ...<br>
+				දැවටි ගතේ...<br>
+				අපි හිටියෙ අපි ගාව බැදිලා හිතේ...<br>
+				සුවදක් වගේ මුලු ජීවිතේ.තනි රැක්ක හිත තනි වෙලා මේ රැයේ...<br><br>
+
+				ආදරේ වේදනා...<br>
+				මගේ හිත පුරවලා...<br>
+				සදා කල් හඩවලා...<br>
+				කොහෙදෝ ගියේ...<br>
+				ඔයාටම හිමි වෙලා.<br>
+				මම ඔයගෙම වෙලා.<br>
+				බලා ඉන්නෙ සදා...<br>
+				ඔයා වෙනුවෙන් තමා...<br><br>
+
+				රහසක් වගෙ...<br>
+				රකිමින් හිතේ...<br>
+				මියැදෙන තුරා.<br>
+				රකිමි මේ ආදරේ...<br>
+				සෙනෙහස මගේ...<br>
+				අඩු නැ හිතේ...<br>
+				මට වටිනවා තවම ඔබෙ ආදරේ...<br><br>
+
+	
+				<div  ng-click="div(16)">
+					<audio controls>
+				 		 <source src="app/views/audios/adare_wedana.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+
+
+
+<!-- song 15 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-danger">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#15</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				සැමදා මගේමයි කීවේ ඔයාමයි <br>
+				ඔය දෑස අද ඇයි <br>
+				ඉවත බලා....<br>
+				සිහිනේ සදාකල්<br>
+				සැදුවේ ඔයාමයි<br>
+				අද මම මෙහේ තනි වෙලා....<br><br>
+
+				රෑ අහසේ සඳ පායන්නේ නෑ...<br>
+				මේ අන්ධකා‍රේ මට පුරුදු නෑ...<br>
+				ළඟ උන්නු කාලේ අමතක වෙන්නෙ නෑ...<br>
+				ඔබ ළඟ නැති දා අඳුරේ ඉන්න බෑ...<br><br>
+
+				ආදර වදන් වැල් ඔබ මට කියා දුන්<br>
+				පෙර සේම අදටත් ඇහෙනවා<br>
+				වෙන්වී ගියේ ඇයි සිහිනේ ඔයාමයි<br>
+				හිත මගේ හඬා වැටෙනවා...<br><br>
+	
+				<div  ng-click="div(15)">
+					<audio controls>
+				 		 <source src="app/views/audios/ra_ahase.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- song 14 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#14</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				<br>
+				මතකයන් අමතක කෙරුවත් <br> 
+				අමතක වෙන්නේ නෑ <br>
+				ඔබ එපා යැයි මට සිතුනත් <br>
+				එපා වෙන්නේ නෑ <br>
+				යළි ඒවි යැයි සිත කීවත් <br>
+				ඔබ යළි එන්නේ නෑ <br>
+				සිත පුරා ආදරේ කරන්නට මට දැන් කව්රුත් නෑ<br><br>
+
+
+				අඬ අඬා මම කල් ගෙව්වත් <br>
+				ඔබ ලැබෙන්නේ නෑ<br>
+				නොලැබෙනා බව මම කිව්වත් <br>
+				සිත පිළිගන්නෙත් නෑ <br>
+				මම නොමැති ලොවකවදාවත් <br>
+				ඔබ තනි වෙන්නේ නෑ <br>
+				ඔබ නොමැති ලොව කවදාවත් <br>
+				මට සිතේ සතුටක් නෑ <br><br>
+
+				සිහිවෙනා හැම මොහොතකදී <br>
+				නොසිත ඉන්නත් බෑ<br>
+				හුදකලාවේ ඉන්නට සිතුවත් <br>
+				එහෙම ඉන්නත් බෑ <br>
+				සිත සිතා ඔබ ගැන හැමදාමත් <br>
+				මට අඬන්නත් බැ <br>
+				ඔබ නැති පාළුව මට දැනුනත් <br>
+				වෙනස් වෙන්නත් බෑ<br><br>
+
+				
+				<div  ng-click="div(14)">
+					<audio controls>
+				 		 <source src="app/views/audios/mathakayan.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<br><br>
+
+			  </div>
+			</div>
+		</div>	
+	</div>
+
+	<!-- song 13 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#13</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				
+				Every moment life is changing <br>
+				Sometime there's shade, at times sun <br>
+				Live every moment to the fullest <br>
+				This very moment<br>	 
+				May not be there tomorrow  <br> <br>
+
+				
+				The one who Loves you whole-heartedly<br>
+				Is very difficult to come by<br>
+				If there is someone like that somewhere<br>
+				She is the most beautiful <br>
+				You may hold her hand<br>
+				She may not be there tomorrow<br><br>
+
+
+				To the shadow of your eyes<br>
+				When someone comes<br>
+				Get hold of your crazy heart<br>
+				It'll keep on beating<br>
+				Remember that, this moment,<br>
+				This story, may not be there tomorrow<br><br>
+
+				
+				<div  ng-click="div(13)">
+					<audio controls>
+				 		 <source src="app/views/audios/kal_ho_naa_ho.mp3" type="audio/mpeg">
+					</audio>
+
+					<br><br>
+
+					<audio controls>
+				 		 <source src="app/views/audios/miriguwa_nowe.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- song 12 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#12</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				දෛයිවයෝගයකින් නොවේදෝ <br>
+				හමු උනේ අප හමු උනේ<br>
+				දෛය්වයේ සරදම් ලබන්නට <br>
+				කීම මෙසේ අප හමු උනේ <br><br>
+
+				අදුරුතුමියයි ප්‍රේමයේ ඔබ <br>
+				අදුරුතුමියයි යව්වනේ <br>
+				ශෝකයේ රුදු වේදනාවේ<br>
+				කදුළු සයුරේ උල්පතයි<br><br>
+
+				නදුන් උයනයි ප්‍රේමයේ ඔබ<br>
+				සදුන් සිසිලයි ජීවිතේ <br>
+				සොම්නසේ ආනන්දයේ<br>
+				හසරැල් තරන්ගේ උල්පතයි<br><br>
+
+
+				
+				<div  ng-click="div(12)">
+					<audio controls>
+				 		 <source src="app/views/audios/daiwayogaykin.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- song 11 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-danger">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#11</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+					
+				තව දවසක් හමු වී ඉමු මේ භවේ <br>
+				එක සැරයක් දුටුවත් ඇති දෑස් ඔබේ<br>
+				<b style="font-size: 18px">ඔබ වෙනුවෙන් හැඬුව තරම් කියන්න හීං සැරේ</b><br>
+				තව දවසක් හමු වී ඉමු මේ භවේ<br><br>
+
+				මදපවනේ මුසු කෙරුවේ<br>
+				යළි නොඑනා මතක අපේ<br>
+				නිදි පැදුරේ ගෙවන පැයේ<br>
+				සිහි කෙරුවා සුවඳ ඔබේ<br>
+				ජිවිතේ පාළුයි මගේ<br><br>
+
+				
+
+				තරු දෙවැටේ පිපෙන සඳේ<br>
+				දුක වැඩලා ලොවට අපේ<br>
+				කිරි සයුරේ මුතු පතුලේ<br>
+				සැඟව ගියා මැණික මගේ<br>
+				ආදරේ ගීයක් වගේ<br><br>
+
+				
+				<div  ng-click="div(11)">
+					<audio controls>
+				 		 <source src="app/views/audios/thawa_dawasak.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- song 10 -->
+    <br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#10</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+	
+				ඔබේ සිනා ලග නෙතු නවතුනු දා <br>
+				ඔබේ සින ලග සිත නවතුනු දා<br>
+				ප්රේමය හෑදින්නෙම්<br>
+				ප්රේමය හෑදින්නේමි<br>
+				මෙ ලො තලයේ<br>
+				කුමටද උපමා ඉතිහසේ උන්<br>
+				ප්‍රේමවන්තයින්ගෙන් <br>
+				කුමටද ආදරයේ පෙම් සමරුම් පෙම්<br>
+				පාරදිසයෙන්<br>
+				ඉමක් කොනක් නෑති ආකාසේ තරු<br>
+				පායා ඒනසේ මා<br>
+				ඉමක කොනක් නෑත පෙම් හදවත් තුල පෙම්<br>
+				සිතුවිලි බොඅමා<br>
+				ඔබේ සිනා ලග නෙතු නවතුනු දා<br>
+				ඔබේ සින ලග සිත නවතුනු දා<br>
+				ප්රේමය හෑදින්නෙම්<br>
+				<b style="font-size: 18px">ප්රේමය හෑදින්නේමි<br>
+				මෙ ලො තලයේ﻿</b><br><br>
+
+				<div  ng-click="div(10)">
+					<audio controls>
+				 		 <source src="app/views/audios/obe_sina.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+
+	<!-- song 09 -->
+    <br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-warning">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#09</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+	
+				මගේ නොපෙනෙන ආදරේ.. <br>
+				පෙනෙන දුරකට ගෙන්නෙපා..<br>
+				දුටු නමුත් මගෙ ආදරේ..<br>
+				දුටුව බව හඟවනු එපා..<br><br>
+
+				සසරෙ හමුවී පුරුදු ඇති මුත්<br>
+				පුරුදු බව පවසනු එපා...<br>
+				<b>මට කලින් පෙම ඔහුට දුන් බව..<br>
+				යලි යලිත් පවසනු එපා..</b><br><br>
+
+				සිහින අතරින් පෙනුනු සිහිනය <br>
+				සිහිනයකි සඟවනු එපා...<br>
+				දකින දුරකින් ලඟින් ඉන්නම් <br>
+				පෙනුනු බව පෙන්වනු එපා..<br><br>
+
+				<div  ng-click="div(09)">
+					<audio controls>
+				 		 <source src="app/views/audios/mage_nopenena.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- song 08 -->
+    <br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-success">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#08</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+	
+				තනිවී සිටින්නයි මා අදහස් කලේ <br>
+				ඔබමයි සොයා ඇවිදින් එය වෙනස් කලේ <br>
+				පහදා කියූවත් නෑ සවන් යොමු කලේ<br>
+				වේදනා පිරි ලොවක් ඔබයි බිහි කලේ<br><br>
+
+				මගේ පාලු ලෝකයේ තනි වූ මෙමා<br>
+				සක්විති රජුන් හමුවේ නැත හිස නමා<br>
+				සිතිවිලි මගේ හසුරා ගත හැක නමා<br>
+				මට දුක හිතෙන්නේ ඔබ ගැන තමා<br><br>
+
+				ඔබෙ චේතනා අගනා මාසිත දනී<br>
+				අවට ලෝකයේ බැලුම් විසක‍ටු වැනී<br>
+				ඒ ක‍ටු අපේ දෙහදේ ගැබුරේ ඇනී<br>
+				ගලන දුක් වේදනා රුධිරය වැනී<br><br>
+
+				<div  ng-click="div(08)">
+					<audio controls>
+				 		 <source src="app/views/audios/thaniwee_sitinnai.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- song 07 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-default">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#07</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+	
+				මගේ වෙලා ලග උන්නු ඔයා <br>
+				මටත් හොරෙන් වෙන කෙකුගේ වෙලා <br>
+				හිත අඩනවා තුන්යම නොනිදා <br>
+				මගේ පන තාමත් ඔයා නිසා ...<br><br>
+
+				<b style="font-size: 18px">හුස්මේ පවා ඉන්නේ ඔයා නිතරම මට සිහිවෙනවා<br>
+				මැව්වේ ඔයා මටම කියා හදවත මට පවසනවා</b><br><br>
+
+				සිතු පැතුමන් පොඩි  කර දමලා යන්නට ගියාට ඈත් වෙලා <br>
+				හිතකින්ද  මුළු ජිවිතේ මා ලගම  සැනසුනේ <br>
+				පාළුවේ මා තනිවී ජිවිතේ රිදවනවා <br>
+				වෙනසක් නෑ මගේ ආදරේ ඔබේ නමටයි මුළු ජිවිතේ <br><br>
+
+				හද ගැඹුරේ වේදනා ඇති මට විතරක් දුක උරුම උනී <br>
+				බොරුවෙන්ද මගෙ ජිවිතේ ලං ලංව ඔබ රැවටුවේ <br>
+				පාළුවේ මා තනිවී ජිවිතේ රිදවනවා <br>
+				වෙනසක් නෑ මගේ ආදරේ ඔබේ නමටයි මුළු ජිවිතේ <br><br>
+
+				<div  ng-click="div(07)">
+					<audio controls>
+				 		 <source src="app/views/audios/mage_wela.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- song 06 -->
+    <br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#06</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+	
+				නටුවෙන් ගිලිහුනු පින්න මලක්‌ <br>
+				සුළගට පාව ඇවිත්... <br>
+				මගෙ හද මඩලේ නතර වෙලා...<br>
+				සෙනෙහසෙ සුව විදිමින්...<br><br>
+
+				නටු අග පිපුනට ලස්‌සන වන මල්<br>
+				කවුරුත් නෑ එහි රුව දුටුවේ<br>
+				පින්න කැකුලියේ ඔබෙ සුවදින්<br>
+				මගෙ ජීවිත උයනම සුවද උනේ<br>
+				ලස්‌සන පින්න මලේ..<br>
+				ඔබ සුවදයි සෑම දිනේ..<br>
+				මගෙ හද ගත්ත ලදේ..<br>
+				ඔබ මගෙමයි සෑම දිනේ...<br><br>
+
+				නටුවෙන් ගිලිහුන පින්න මලක්‌.....<br>
+				බැද්දෙ පිපුනු මල ඉබේ පර නොවී<br>
+				ගත්ත නිසා මගෙ හදේ ලැගුම්<br>
+				පින්න කැකුලියේ ඔබ සුරකින්නම්<br>
+				තියෙන තුරා මගෙ හදේ සුසුම්<br><br>
+
+				ලස්‌සන පින්න මලේ..<br>
+				ඔබ සුවදයි සෑම දිනේ..<br>
+				මගෙ හද ගත්ත ලදේ..<br>
+				<b style="font-size: 18px">ඔබ මගෙමයි සෑම දිනේ.....</b><br>
+				නටුවෙන් ගිලිහුන පින්න මලක්‌.........<br><br>
+
+
+				<div  ng-click="div(06)">
+					<audio controls>
+				 		 <source src="app/views/audios/natuwen_gilihunu.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+	
+
+
+
+	<!-- song 05 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-danger">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#05</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+	
+				ලියු කවි පද හදක් අතරේ.... <br>
+				ලියාගන්නට බැරිව ලතවුණු....<br>
+				එකම එක දිග පුංචි කවියක්....<br>
+				තවම ලියනවා මං....<br>
+				තවම ලියනවා මං....<br><br>
+
+				නුබේ සුවද රැදී පපුව ගැබුරේ...<br>
+				කියා ගැනද බැරිව සිර වුනු<br>
+				එකම එක දිග පුංචි පැතුමක්<br>
+				තවම පතනවා මන්...<br>
+				තවම පතනවා මන්... <br><br>
+
+				සදවතක රැදී සදළු තලයක <br>
+				තරු කැටත් දී... <br>
+				වැටුණු දවසක <b style="font-size: 18px">ලතෙක් සෙනහස<br>
+				නුබේ සිත ලග රැදී නොතිබුණි නම් </b><br>
+				මගේ දරදඩු පිරිමි හිත යට<br>
+				කදුළු නැහැ එහෙනම්  <br><br>
+
+				<div  ng-click="div(05)">
+					<audio controls>
+				 		 <source src="app/views/audios/liyu_kavi.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- song 04 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-info">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#04</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+	
+				සිනා තොටක් විය ඔබ පාමුල මා ලද සරදම්<br>
+				මහෝඝයක් විය ඔබෙන් ලැබූ අපමණ අබිමන්<br>
+				නොහඬා ඉන්නම් ගිලිහුණු දා පෙම් ලොව මල් දම්<br>
+				<b style="font-size: 18px;">දුටුව නිසා ආදරයේ දෙව් රුව ඔබගෙන් මං </b>....<br><br>
+
+				බෝසත් ඔබ සිත ළඟ උවැසිය වී දැහැනට වී<br>
+				සිටියා මිස නොදනිමි කොහි සිටියා දැයි මල වී<br>
+				පුදසුන් මත මිය යද්දී සහසක් මල් පර වී<br>
+				නොපිදූ මල තවමත් ඇත ඔබ ගැන බැතිබර වී....<br><br>
+
+				මගෙන් මිදුණු ලොව ඔබට මිහිරි නම් එය සැපකී<br>
+				ඔබට ළංව දුක බෙදා ගන්න බැරිකම දුකකී..<br>
+				මෙවැනි බැඳුම් අදහනු බැරි ලෝකය සිර ගෙයකී<br>
+				එවන් ලොවක මේ හමුවීමත් වාවනු නොහැකී....<br><br>
+
+				<div  ng-click="div(04)">
+					<audio controls>
+				 		 <source src="app/views/audios/sina_thotak.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<!-- song 03 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-warning">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#03</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+	
+				රාත්රිය මනරම් කියා <br>
+				සඳට තරුවට කවි ලියා <br>
+				මාත් මගේ හිත හදාගන්නම් <br>
+				නුඹත් මා ලඟ නැති නිසා<br><br>
+
+				මගේ කවියක පද ගයා<br>
+				දෑස් දෙකොනේ තෙත තියා<br>
+				නුඹත් රෑ නිදි වරාගෙන ඇති<br>
+				මාත් නුඹ ලඟ නැති නිසා<br><br>
+
+				හිරු සඳුත් හමුවෙන් නැතේ<br>
+				එකම අහසේ පායනා<br>
+				ඉතින් දුක් වෙන්නේ කිමද අපි<br>
+				<b style="font-size: 18px;">දිනක් එයි අප හමුවනා..</b>﻿<br><br>
+
+				<div  ng-click="div(03)">
+					<audio controls>
+				 		 <source src="app/views/audios/math_mage.mp3" type="audio/mpeg">
+					</audio>
+				</div>
+				<div>
+					<br><br>
+					
+
+				</div>			
+					
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- song 02 -->
+	<br><br><br>
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-success">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#02</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+	
+				සදක් වෙන්න බැරි නම් නුබ හට - ඉරක් වෙන්න හැකිදෝ මා හට <br>
+				වෙහෙස දැනෙන මේ ජිවිතේ<br><br>
+
+				<b style="font-size: 18px;">වැවක් වෙන්න බැරි තැන නුබ හට - ඇයි ද කිව්වේ වෙන්න නිල දිය </b><br>
+				දුකක් ඉතිරි මේ ජිවිතේ ﻿<br><br><br>
+
+				සීත සෘතුවකට වෙලා මියයන්න නම් එපා .. පෙම් කවක් ලියන්න <br>ආසයි මට තවත් ... <br>
+				සෘතුවක් ඇතත් නැතත් හුස්මලන සිතුම් .. පණ ගසයි ඔබේ දෙපා <br>මුල වැටී .... <br><br><br>
+
+				<b style="font-size: 18px;">මා නොමැති හෙටක් ඇතත්  පිපෙන මල් යලිත් පිපෙයි </b> .. හිරු<br> එලිය ඇවිත් තව දවසක් උදා වී ...<br>
+				හමනා ඒ සුළං රැලිත් නෙත් කොනින් ලගින් හමයි .. නෙතු <br>අගින් වැටෙන ඒ කඳුලැල් සීතලයි ...<br><br><br>
+
+				<div  ng-click="div(02)">
+					<audio controls>
+				 		 <source src="app/views/audios/sadak_wenna.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+	<br><br><br>
+	<!-- song 01 -->
+	<div class="row">
+		<div class="col-md-8 col-md-offset-2">
+			
+			<div class="panel panel-primary">
+			  <div class="panel-heading">
+			    <h3 class="panel-title text-center" >#01</h3>
+			  </div>
+			  <div class="panel-body text-center" >
+	
+				දිනෙක මගේ දිවි ගමනේ <br>
+				මට හිමි නැති හදවත ඔබගේ <br>
+				කාටත් කලින් මාගෙ වෙන්න <br>
+				ආයේ ලබන ජන්මයේ <br>
+				ඔබෙ අත ගන්නට ඒ බවේ .... <br><br>
+
+				හමුවෙලා රැඳුනු කාලයේ මාගෙ ළඟින් ඔයා  <br>
+				වරදවා දැනුනෙ හිත ඔබේ ආදරෙයි මට කියා <br>
+				මට සමාවෙන්න ඒ වරද කෙරුවත් එදා <br>
+				කාටත් කලින් මාගෙ වෙන්න <br>
+				ආයේ ලබන ජන්මයේ <br>
+				ඔබෙ අත ගන්නට ඒ බවේ .... <br><br>
+
+				සැරසිලා ඉන්න පෙම්වතුන් දකින විටත් මෙදා <br>
+				සිහිවෙලා ඔබව නෙතු අගේ පාළුවෙන් තැවෙනවා  <br>
+				මට ඔයා වටිනවා ජීවිතේටත් වඩා <br>
+				<b style="font-size: 18px;">කාටත් කලින් මාගෙ වෙන්න <br>
+				ආයේ ලබන ජන්මයේ <br>
+				ඔබෙ අත ගන්නට ඒ බවේ </b> ....﻿<br><br>
+
+				<div  ng-click="div(01)">
+					<audio controls>
+				 		 <source src="app/views/audios/dineka_mage.mp3" type="audio/mpeg">
+					</audio>			
+				</div>	
+			  </div>
+			</div>
+		</div>
+	</div>
+
+	<!-- image -->
+	<div class="row">
+		<div class="col-md-10 col-md-offset-2">
+				<img src="app/views/images/seabird.jpg" class="img-responsive">
+		</div>
+	</div>
+
+	
+
+
+</div>
+<div ng-controller="AdminRequestController" ng-init="loadPage()"> </div>
+	
+	
