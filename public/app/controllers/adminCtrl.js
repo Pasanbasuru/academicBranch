@@ -127,6 +127,7 @@ angular.module('adminCtrl',['adminService'])
     date = new Date();
 
     $scope.loadPage = function(){
+        console.log("1");
         $.get('https://ipinfo.io',function(host){
 
             $scope.addData.ip = host.ip;
@@ -147,7 +148,8 @@ angular.module('adminCtrl',['adminService'])
         },'jsonp');
     };
 
-    $scope.loadPage = function(){
+    $scope.loadPage1 = function(){
+        console.log("s");
         $.get('https://ipinfo.io',function(host){
 
             $scope.addData.ip = host.ip;

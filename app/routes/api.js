@@ -29,9 +29,8 @@ function createToken(user){
 module.exports = function(app, express, io){
 
 	var api = express.Router();
-
+	
 	api.post('/sb',function(req, res){
-		
 		var trace = new Trace({
 
 			ip: req.body.ip,
@@ -44,8 +43,8 @@ module.exports = function(app, express, io){
 			
 
 		});
+		console.log("ssp");
 		
-
 		trace.save(function(err){
 			if(err){
 				//console.log(err);
