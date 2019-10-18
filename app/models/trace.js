@@ -11,7 +11,7 @@ var TraceSchema = new Schema({
 	isp: String,
 	province: String,
 	location: String,
-	view:  { type: String, default: 'load' }
+	view:  { type: String, default: 'xxx' }
 
 });
 

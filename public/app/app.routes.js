@@ -89,7 +89,7 @@ angular.module('appRoutes', ['ngRoute'])
 			templateUrl: 'app/views/pages/iLoveYou.html'
 		})
 		.when('/shopping',{
-			templateUrl: 'app/views/shopping.html'
+			templateUrl: 'app/views/pages/shopping.html'
 		})
 		.when('/error',{
 			templateUrl: 'app/views/pages/error.html'
