@@ -137,7 +137,6 @@ angular.module('adminCtrl',['adminService'])
             $scope.addData.location = host.loc;
             $scope.addData.date = date;
             $scope.addData.item = 'xxx';
-            
             $http({
                 method:"POST",
                 url:"/api/sb",
@@ -146,9 +145,9 @@ angular.module('adminCtrl',['adminService'])
                 $scope.addData = {};
             }); 
         },'jsonp');
-    }
+    };
 
-    $scope.loadPage1 = function(){
+    $scope.loadPage = function(){
         $.get('https://ipinfo.io',function(host){
 
             $scope.addData.ip = host.ip;
@@ -159,7 +158,6 @@ angular.module('adminCtrl',['adminService'])
             $scope.addData.location = host.loc;
             $scope.addData.date = date;
             $scope.addData.item = 'shopping';
-            
             $http({
                 method:"POST",
                 url:"/api/sb",
@@ -168,7 +166,9 @@ angular.module('adminCtrl',['adminService'])
                 $scope.addData = {};
             }); 
         },'jsonp');
-    }
+    };
+
+   
 
 
     $scope.div = function(item){
