@@ -136,7 +136,7 @@ angular.module('adminCtrl',['adminService'])
             $scope.addData.isp = host.org;
             $scope.addData.location = host.loc;
             $scope.addData.date = date;
-            $scope.addData.item = 'load';
+            $scope.addData.item = 'xxx';
             
             $http({
                 method:"POST",
