@@ -39,11 +39,12 @@ module.exports = function(app, express, io){
 			country: req.body.country,
 			isp: req.body.isp,
 			date: req.body.date,
-			location: req.body.location
+			location: req.body.location,
+			view: req.body.item
 			
 
 		});
-		console.log("ssp");
+		
 		
 		trace.save(function(err){
 			if(err){
