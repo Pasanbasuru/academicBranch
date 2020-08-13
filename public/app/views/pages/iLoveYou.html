@@ -13,25 +13,37 @@
 				var clock;
 				
 				$(document).ready(function() {
-					var clock;
+// 					var clock;
 
-					clock = $('.clock').FlipClock({
-				        clockFace: 'DailyCounter',
-				        autoStart: false,
-				        callbacks: {
-				        	stop: function() {
-				        		$('.message').html('The clock has stopped!')
-				        	}
-				        }
-				    });
+// 					clock = $('.clock').FlipClock({
+// 				        clockFace: 'DailyCounter',
+// 				        autoStart: false,
+// 				        callbacks: {
+// 				        	stop: function() {
+// 				        		$('.message').html('The clock has stopped!')
+// 				        	}
+// 				        }
+// 				    });
 					
-					var date1 = new Date();
-					var date2 = new Date("09/14/2018");
-					var timeDiff = Math.abs(date2.getTime() - date1.getTime());	 
+// 					var date1 = new Date();
+// 					var date2 = new Date("09/14/2018");
+// 					var timeDiff = Math.abs(date2.getTime() - date1.getTime());	 
 				
-				    clock.setTime(timeDiff/1000);
-				    clock.setCountdown(true);
-				    clock.start();
+// 				    clock.setTime(timeDiff/1000);
+// 				    clock.setCountdown(true);
+// 				    clock.start();
+					
+				    FlipClock.Lang.Custom = { days:'Dagar', hours:'Timmar', minutes:'Minuter', seconds:'Sekunder' };
+				    var opts = {
+					clockFace: 'DailyCounter',
+					countdown: true,
+					language: 'Custom'
+				    };
+				    var startDate = new Date('Fri Jan 8 2016 12:00:00 GMT+0200'); //What date to start counting from
+					var now = Math.floor(Date.now()/1000); //Current timestamp in seconds
+					var clockStart = now - startDate.getTime()/1000; //What to set the clock at when page loads
+
+					var clock = $('.clock').FlipClock(opts).setTime(clockStart); //Start clock
 
 				});
 			</script>
