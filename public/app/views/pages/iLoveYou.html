@@ -37,7 +37,7 @@
 				var now = Math.floor(Date.now()/1000); //Current timestamp in seconds
 				var clockStart = now - startDate.getTime()/1000; //What to set the clock at when page loads
 
-				var clock2 = $('.clock2').FlipClock(opts).setTime(clockStart); //Start clock
+				var clock2 = $('.clock2').FlipClock().setTime(clockStart); //Start clock
 
 				});
 			</script>
