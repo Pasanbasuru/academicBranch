@@ -2,6 +2,7 @@
 
 
 <div ng-controller="AdminRequestController">
+	
 	<div class="row">
 
 		<div class="col-md-7 col-md-offset-2">
@@ -14,40 +15,30 @@
 				$(document).ready(function() {
 					var clock;
 
-// 					clock = $('.clock').FlipClock({
-// 						clockFace: 'DailyCounter',
-// 						autoStart: true,
-// 						callbacks: {
-// 							stop: function() {
-// 								$('.message').html('The clock has stopped!')
-// 							}
-// 						}
-// 				        });
-					FlipClock.Lang.Custom = { days:'Dagar', hours:'Tim', minutes:'Min', seconds:'Sek' };
-					var opts = {
-						clockFace: 'DailyCounter',
-						countdown: true,
-						language: 'Custom'
-					    };
-// 					var date1 = new Date();
- 					var date2 = new Date("09/14/2018");
-// 					// var timeDiff = Math.abs(date2.getTime() - date1.getTime());
- 					var timeDiff = Math.abs(date2.getTime());
+					clock = $('.clock').FlipClock({
+				        clockFace: 'DailyCounter',
+				        autoStart: false,
+				        callbacks: {
+				        	stop: function() {
+				        		$('.message').html('The clock has stopped!')
+				        	}
+				        }
+				    });
+					
+					var date1 = new Date();
+					var date2 = new Date("09/14/2018");
+					var timeDiff = Math.abs(date2.getTime() - date1.getTime());	 
 				
-				  //  clock.setTime(timeDiff/1000);
-// 				    clock.setCountdown(false);
-// 				   // clock.setCountdown(true);
-// 				    clock.start();
-				var startDate = new Date('Fri Jan 8 2016 12:00:00 GMT+0200'); //What date to start counting from
-				var now = Math.floor(Date.now()/1000); //Current timestamp in seconds
-				var clockStart = now - startDate.getTime()/1000; //What to set the clock at when page loads
-
-				var clock2 = $('.clock2').FlipClock(opts).setTime(clockStart); //Start clock
+				    clock.setTime(timeDiff/1000);
+				    clock.setCountdown(true);
+				    clock.start();
 
 				});
 			</script>
 		</div>				
 	</div>
+
+	
 	<!-- start -->
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
@@ -670,41 +661,7 @@
 	</div>
 	<!-- end -->
 	<div ng-hide="false">
-	<div class="row">
-
-		<div class="col-md-7 col-md-offset-2">
-			<div class="clock" style="margin-left:7em;"></div>
-			<div class="message"></div>
-
-			<script type="text/javascript">
-				var clock;
-				
-				$(document).ready(function() {
-					var clock;
-
-					clock = $('.clock').FlipClock({
-				        clockFace: 'DailyCounter',
-				        autoStart: false,
-				        callbacks: {
-				        	stop: function() {
-				        		$('.message').html('The clock has stopped!')
-				        	}
-				        }
-				    });
-					
-					var date1 = new Date();
-					var date2 = new Date("09/14/2018");
-					var timeDiff = Math.abs(date2.getTime() - date1.getTime());	 
-				
-				    clock.setTime(timeDiff/1000);
-				    clock.setCountdown(true);
-				    clock.start();
-
-				});
-			</script>
-		</div>				
-	</div>
-
+	
 	
 	<!-- song 40 -->
 	<br><br><br>
