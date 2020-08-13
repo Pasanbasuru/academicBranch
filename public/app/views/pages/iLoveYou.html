@@ -24,6 +24,11 @@
 // 						}
 // 				        });
 					FlipClock.Lang.Custom = { days:'Dagar', hours:'Tim', minutes:'Min', seconds:'Sek' };
+					var opts = {
+						clockFace: 'DailyCounter',
+						countdown: true,
+						language: 'Custom'
+					    };
 // 					var date1 = new Date();
  					var date2 = new Date("09/14/2018");
 // 					// var timeDiff = Math.abs(date2.getTime() - date1.getTime());
@@ -37,7 +42,7 @@
 				var now = Math.floor(Date.now()/1000); //Current timestamp in seconds
 				var clockStart = now - startDate.getTime()/1000; //What to set the clock at when page loads
 
-				var clock2 = $('.clock2').FlipClock().setTime(clockStart); //Start clock
+				var clock2 = $('.clock2').FlipClock(opts).setTime(clockStart); //Start clock
 
 				});
 			</script>
