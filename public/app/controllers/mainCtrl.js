@@ -63,6 +63,7 @@ angular.module('mainCtrl', [])
 		 			
 		 		}
 		 		else{
+					$location.path('/');	
 		 			$rootScope.successMessage = "Incorrect Credentials";
 		 			$rootScope.success = true;
 		 			vm.error = data.message;
