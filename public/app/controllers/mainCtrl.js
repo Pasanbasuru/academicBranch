@@ -7,7 +7,7 @@ angular.module('mainCtrl', [])
 	var vm = this;
 	$rootScope.success = false;
 	$rootScope.successMessage = '';
-	vm.loggedIn = Auth.isLoggedIn();
+	vm.loggedIn = true; //Auth.isLoggedIn()
 
 	$rootScope.$on('$routeChangeStart', function(){
 
